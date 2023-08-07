@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/tailwind.css">
+</head>
+<body>
+ <div class="  min-h-screen bg-gradient-to-b from-[#8AFE8F] to-[#2c6e2e] flex  justify-center">
+  <!-- calculator goes here -->
+    <div class=" bg-gradient-to-b from-[#4C4D6B] to-[#22252D] border
+     border-gray-500 
+       shadow-2xl rounded-lg h-fit my-auto
+    ">
+      <!-- statue bar -->
+      <div class=" flex place-content-between items-center ">
+        <img src="./img/time.svg" alt=" time">
+        <img src="./img/battry.svg" alt="battry">
+      </div>
+        <!-- mode part -->
+        <div class=" flex justify-center items-center mt-4 space-x-[1px]" >
+          <a href="./light Mode.html" class="  bg-slate-400 py-2 px-3 rounded-l-full border border-gray-300"><img src="./img/light.svg" alt="dark mode"></a>
+          <a class=" bg-slate-300 py-1 px-3 rounded-r-full border border-gray-300"><img src="./img/dark.svg" alt="dark mode"></a>
+        </div>
+        <!-- form goes here -->
+        <form>
+            <input id="result" type="text" class=" bg-transparent
+              p-8 text-3xl outline-none  focus:bg-gray-700
+               rounded-t-lg text-white text-right
+            ">
+        </form>
+        <!-- buttons goes here  -->
+        <div class="p-4 text-[#3A3B50] grid grid-cols-4 gap-5 font-bold items-center " >
+            <!-- 1st row of buttons -->
+            
+              <button class=" bg-[#D9D9D9]  h-16 w-16 rounded-full  "onclick="clearResult()" >AC</button>
+              <button class=" bg-[#D9D9D9]  h-16 w-16 rounded-full ">%</button>
+              <button class=" bg-[#D9D9D9]  h-16 w-16 rounded-full  " >\</button>
+              <button class=" bg-[#8AFE8F]  h-16 w-16 rounded-full  "  onclick="appendCharacter('/')">&divide;</button>          
+      
+            <!-- 2nd row of buttons -->
+              
+                <button class=" bg-[#D9D9D9] rounded-full  h-16 w-16"  onclick="appendCharacter('1')">1</button>
+                <button class=" bg-[#D9D9D9] rounded-full  h-16 w-16"  onclick="appendCharacter('2')">2</button>
+                <button class=" bg-[#D9D9D9] rounded-full  h-16 w-16"  onclick="appendCharacter('3')">3</button>
+                <button class=" bg-[#8AFE8F] rounded-full  h-16 w-16" onclick="appendCharacter('*')">&times;</button>
+                      
+            <!-- 3rd row of buttons -->
+              
+                <button class=" bg-[#D9D9D9] rounded-full  h-16 w-16"  onclick="appendCharacter('4')">4</button>
+                <button class=" bg-[#D9D9D9] rounded-full  h-16 w-16"  onclick="appendCharacter('5')">5</button>
+                <button class=" bg-[#D9D9D9] rounded-full  h-16 w-16"  onclick="appendCharacter('6')">6</button>
+                <button class=" bg-[#8AFE8F] rounded-full  h-16 w-16" onclick="appendCharacter('-')">&minus;</button>
+              
+            <!-- 4th row of buttons -->
+              
+                <button class=" bg-[#D9D9D9] rounded-full  h-16 w-16"  onclick="appendCharacter('7')">7</button>
+                <button class=" bg-[#D9D9D9] rounded-full  h-16 w-16"  onclick="appendCharacter('8')">8</button>
+                <button class=" bg-[#D9D9D9] rounded-full  h-16 w-16"  onclick="appendCharacter('9')">9</button>
+                <button class=" bg-[#8AFE8F] rounded-full  h-16 w-16" onclick="appendCharacter('+')">&plus;</button>
+              
+            <!-- 5th row of buttons -->
+                <button class=" bg-[#D9D9D9] rounded-full  h-16 w-16 "  onclick="appendCharacter('0')">0</button>
+                <button class=" bg-[#D9D9D9] rounded-full  h-16 w-16"  onclick="appendCharacter('.')">.</button>
+                <button class=" col-span-2 bg-[#8AFE8F] rounded-full p-4 "  onclick="calculateResult()">&equals;</button>
+        </div>
+    </div>
+ </div>
+
+ <script>
+  function appendCharacter(character) {
+  const result = document.getElementById('result');
+  result.value += character;
+  }
+  
+  function clearResult() {
+  const result = document.getElementById('result');
+  result.value = '';
+  }
+  
+  function deleteCharacter() {
+  const result = document.getElementById('result');
+  result.value = result.value.slice(0, -1);
+  }
+  
+  function calculateResult() {
+  const result = document.getElementById('result');
+  try {
+  result.value = eval(result.value);
+  } catch (error) {
+  result.value = 'Error';
+  }
+  }
+  </script>
+</body>
+</html>
