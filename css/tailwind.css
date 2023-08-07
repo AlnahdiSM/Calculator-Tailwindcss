@@ -530,6 +530,18 @@ video {
   position: relative;
 }
 
+.top-4 {
+  top: 1rem;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -813,6 +825,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-slate-300 {
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
 .shadow-2xl {
