@@ -6,27 +6,27 @@
   <link rel="stylesheet" href="./css/tailwind.css">
 </head>
 <body>
- <div class=" mx-auto w-screen h-screen bg-gradient-to-b from-[#8AFE8F] to-[#2c6e2e] flex  justify-center">
+ <div class="h-full w-full bg-gradient-to-b from-[#8AFE8F] to-[#2c6e2e] flex items-center justify-center">
   <!-- calculator goes here -->
-    <div class="  bg-gradient-to-b from-[#4C4D6B] to-[#22252D] border
-     border-gray-500 
-       shadow-2xl rounded-lg h-fit my-auto mx-auto min-w-[360px]
+    <div class=" bg-gradient-to-b from-[#4C4D6B] to-[#22252D] border
+     border-gray-500
+       shadow-2xl rounded-lg h-fit my-auto w-[360px] relative
     ">
       <!-- statue bar -->
-      <div class=" flex place-content-between items-center ">
+      <div class=" flex place-content-between items-center px-2 pt-2 ">
         <img src="./img/time.svg" alt=" time">
         <img src="./img/battry.svg" alt="battry">
       </div>
         <!-- mode part -->
         <div class=" flex justify-center items-center mt-4 space-x-[1px]" >
-          <a href="./light Mode.html" class="  bg-slate-400 py-2 px-3 rounded-l-full border border-gray-300"><img src="./img/light.svg" alt="dark mode"></a>
-          <a class=" bg-slate-300 py-1 px-3 rounded-r-full border border-gray-300"><img src="./img/dark.svg" alt="dark mode"></a>
+          <a href="./light Mode.html" class="  bg-slate-300 py-2 px-3 rounded-l-full border border-gray-600"><img src="./img/light.svg" alt="dark mode"></a>
+          <a  class=" bg-slate-400 py-1 px-3 rounded-r-full border border-gray-600"><img src="./img/dark.svg" alt="dark mode"></a>
         </div>
         <!-- form goes here -->
-        <form>
+        <form class="flex justify-center h-24">
             <input id="result" type="text" class=" bg-transparent
-              p-8 text-3xl outline-none  focus:bg-gray-700
-               rounded-t-lg text-white text-right
+              text-3xl outline-none  focus:bg-gray-700
+               rounded-t-lg text-[#22252D] text-right
             ">
         </form>
         <!-- buttons goes here  -->

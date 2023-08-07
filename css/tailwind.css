@@ -522,6 +522,14 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -561,6 +569,30 @@ video {
   height: 100vh;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-28 {
+  height: 7rem;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -569,8 +601,28 @@ video {
   width: 4rem;
 }
 
-.w-screen {
-  width: 100vw;
+.w-\[\] {
+  width: ;
+}
+
+.w-\[3\] {
+  width: 3;
+}
+
+.w-\[360\] {
+  width: 360;
+}
+
+.w-\[360px\] {
+  width: 360px;
+}
+
+.w-\[min-w-\\\[360px\\\]\] {
+  width: min-w-\[360px\];
+}
+
+.w-full {
+  width: 100%;
 }
 
 .min-w-\[360px\] {
